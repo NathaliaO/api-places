@@ -28,14 +28,6 @@ RUN mkdir -p /home/$user/.composer && \
 
 WORKDIR /var/www
 
-COPY . .
-
-RUN chown -R $user:www-data storage database
-RUN chmod -R 775 storage
-
-RUN composer install --no-interaction
-
 USER $user
 
-# Adicione o comando para rodar as migrations
-CMD ["sh", "-c", "php artisan migrate && php-fpm"]
+CMD ["php-fpm"]
