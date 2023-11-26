@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     restart: unless-stopped
     volumes:
-      - .:/var/www/
+      - .:/var/www
     networks:
       - laravel_network
 
@@ -15,7 +15,7 @@ services:
     ports: 
       - "8989:80"
     volumes:
-      - .:/var/www/
+      - .:/var/www
       - ./docker/nginx/:/etc/nginx/conf.d/
     networks:
       - laravel_network
