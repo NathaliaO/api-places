@@ -4,6 +4,7 @@ Api-Places
  - Faça uma copia do .env.example, e renomei para .env
  - Rode o comando: docker compose up -d --build
  - Entre no container: docker compose exec app bash
+ - cd html
  - Rode os comandos: php artisan key:generate, composer install e php artisan migrate
  - Use o POSTMAN para fazer as requisições.
 

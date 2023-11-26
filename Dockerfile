@@ -28,6 +28,4 @@ RUN mkdir -p /home/$user/.composer && \
 
 WORKDIR /var/www
 
-USER $user
-
 CMD ["php-fpm"]
